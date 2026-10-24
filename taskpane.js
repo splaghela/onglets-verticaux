@@ -444,7 +444,7 @@
     const ok = await ask({
       title: many ? "Supprimer " + ids.length + " feuilles ?" : "Supprimer la feuille ?",
       text: (many ? names.slice(0, 6).join(", ") + (names.length > 6 ? "…" : "") : "« " + names[0] + " »") +
-        (many ? " seront supprimées" : " sera supprimée") + " avec leur contenu. Cette action ne peut pas être annulée.",
+        (many ? " seront supprimées avec leur contenu" : " sera supprimée avec son contenu") + ". Cette action ne peut pas être annulée.",
       ok: "Supprimer",
       danger: true
     });
