@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>Onglets verticaux</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <link rel="stylesheet" href="taskpane.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="search">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>
+      <input id="filter" type="search" placeholder="Rechercher une feuille" autocomplete="off" spellcheck="false">
+    </div>
+    <button id="add" class="icon-btn" title="Nouvelle feuille" aria-label="Nouvelle feuille">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg>
+    </button>
+  </header>
+
+  <ul id="list" class="list" role="listbox" aria-label="Feuilles du classeur"></ul>
+
+  <footer class="foot">
+    <label class="toggle">
+      <input id="showHidden" type="checkbox">
+      <span>Afficher les feuilles masquées</span>
+    </label>
+    <span id="count" class="count"></span>
+  </footer>
+
+  <div id="menu" class="menu" hidden>
+    <button data-act="rename">Renommer</button>
+    <button data-act="duplicate">Dupliquer</button>
+    <button data-act="toggleHide">Masquer</button>
+    <div class="menu-sep"></div>
+    <div class="menu-label">Couleur d'onglet</div>
+    <div class="swatches">
+      <button data-color="" class="sw sw-none" title="Aucune"></button>
+      <button data-color="#C0392B" style="background:#C0392B" title="Rouge"></button>
+      <button data-color="#E67E22" style="background:#E67E22" title="Orange"></button>
+      <button data-color="#F1C40F" style="background:#F1C40F" title="Jaune"></button>
+      <button data-color="#27AE60" style="background:#27AE60" title="Vert"></button>
+      <button data-color="#2980B9" style="background:#2980B9" title="Bleu"></button>
+      <button data-color="#8E44AD" style="background:#8E44AD" title="Violet"></button>
+      <button data-color="#7F8C8D" style="background:#7F8C8D" title="Gris"></button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <script src="taskpane.js"></script>
+</body>
+</html>
